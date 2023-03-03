@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday task</title>
+</head>
+<body>
+<form>
+    <input type="date" id="DOB">
+    <button >submit</button>
+    <div id="result"></div>
+</form>
+    <script>
+        let form=document.querySelector('form');
+        form.addEventListener('submit',function(ssa){
+            ssa.preventDefault();
+            let input=document.querySelector('#DOB').value;
+            let result=document.querySelector('#result')
+            let date =new Date(input);
+             
+            let newDate=new Date();
+
+            let previousYear=date.getFullYear();
+
+            let newD=newDate.getFullYear();
+
+            let sub=newD-previousYear;
+
+            result.innerHTML=`${sub}`;
+        })
+    </script>
+</body>
+</html>
